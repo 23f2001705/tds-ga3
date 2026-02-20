@@ -5,6 +5,9 @@ on:
     - cron: '30 5 * * *'  # Runs every day at 5:30 UTC
   workflow_dispatch:       # Allows manual trigger for testing
 
+permissions:
+  contents: write          # Required to push commits
+
 jobs:
   daily-commit:
     runs-on: ubuntu-latest
